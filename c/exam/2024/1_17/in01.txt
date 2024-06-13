@@ -1,7 +1,0 @@
-+ 23 CogwheelMaster
-+ 17 CogwheelMaster
-+ 51 CogwheelMaster
-+ 36 CogwheelMaster
-? 17:12,1
-? 1:1600,1
-? 600:2,1

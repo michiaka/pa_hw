@@ -1,5 +1,0 @@
-
-delList(TITEM * )
-{
-    while()
-}
