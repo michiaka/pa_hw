@@ -1,6 +1,3 @@
-# teamlab_portfolio_2024
-チームラボ　サマーインターンシップ用　CTU課題
-
 ## 課題
 Spreadsheet Processor
 
