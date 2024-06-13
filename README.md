@@ -57,13 +57,13 @@ load(): スプレッドシートの内容を読み込む
 
 
 1. リポジトリをクローンします：
-    git clone https://github.com/michiaka/teamlab_portfolio_2024.git
+    `git clone https://github.com/michiaka/teamlab_portfolio_2024.git`
     
 2. クローンしたディレクトリ内でのプログラムのコンパイル
-    g++ -pedantic -Wall -Wextra -g3 -fsanitize=address -std=c++20 -L ./ main.cpp -l:libexpression_parser.a -o main
+    `g++ -pedantic -Wall -Wextra -g3 -fsanitize=address -std=c++20 -L ./ main.cpp -l:libexpression_parser.a -o main`
 
 3. クローンしたディレクトリ内でのプログラムの実行
-    ./main
+    `./main`
 
 
  
