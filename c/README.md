@@ -28,5 +28,5 @@
 - **概要**: 疎行列を扱うための一連の関数を実装します。疎行列は、多くの値が設定されていない（ゼロと見なされる）行列です。
 - **ポイント**: 単一リンクリストを用いて、行列の効率的な表現を実装します。行と列は昇順で格納されます。
 
-![image](https://github.com/michiaka/teamlab_portfolio_2024/assets/155388365/e729deb8-6c3c-4e6e-b58e-90eef189c192?raw=true&s=100)
+![image](https://github.com/michiaka/teamlab_portfolio_2024/assets/155388365/e729deb8-6c3c-4e6e-b58e-90eef189c192?raw=true&s=10)
 
