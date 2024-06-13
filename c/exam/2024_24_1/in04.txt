@@ -1,0 +1,5 @@
+A 12:00:00 14:00:00 CeskeDrahy
+B 15:00:00 16:20:00 CeskeDrahy
+A 11:20:00 12:00:00 CeskeDrahy
+? 11:00:00
+B 16:30:00 19:40:00 CeskeDrahy
