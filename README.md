@@ -14,4 +14,8 @@
 ### リポジトリのクローン
 
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/michiaka/teamlab_portfolio_2024.git
+=======
+git clone https://github.com/michiaka/teamlab_portfolio_2024.git
+>>>>>>> origin/main
