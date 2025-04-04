@@ -1,21 +1,17 @@
-# ポートフォリオリポジトリ
+# Portfolio Repository
 
-このリポジトリには、C言語およびC++で作成した様々なプロジェクトや課題が含まれています。
+This repository contains various projects and assignments created using the C and C++ programming languages.
 
-## 構成
+## Structure
 
-- **C**: Cプログラミング言語を使用して完成させた課題やプロジェクトを含みます。
-- **C++**: C++プログラミング言語を使用して開発したスプレッドシートプロセッサがここに含まれます。
+- **C**: Contains assignments and projects completed using the C programming language.
+- **C++**: Contains a spreadsheet processor developed using the C++ programming language.
 
-## 使用方法
+## Usage
 
-このリポジトリ内のプロジェクトを使用するには:
+To use the projects in this repository:
 
-### リポジトリのクローン
+### Clone the Repository
 
 ```bash
-<<<<<<< HEAD
-git clone https://github.com/michiaka/teamlab_portfolio_2024.git
-=======
-git clone https://github.com/michiaka/teamlab_portfolio_2024.git
->>>>>>> origin/main
+git clone https://github.com/michiaka/pa_hw.git
