@@ -1,68 +1,70 @@
-## 課題
-Spreadsheet Processor
+## Assignment  
+**Spreadsheet Processor**
 
-## 概要
-このプロジェクトは、スプレッドシートプロセッサのバックエンドをシミュレートするクラスを開発することを目指しています。スプレッドシートは、セルの操作（値の設定、値の計算、コピー）を行うインターフェースを提供し、セルの値を定義する式をサポートし、セル間の循環依存を検出し、スプレッドシートをファイルに保存/ロードします。
+## Overview  
+This project aims to develop a class that simulates the backend of a spreadsheet processor. The spreadsheet provides an interface for cell operations such as setting values, computing values, and copying cells. It supports expressions to define cell values, detects circular dependencies between cells, and allows saving/loading the spreadsheet to/from a file.
 
-## 目標
-- スプレッドシートのセルに値を設定し、その値を計算できるようにする
-- 式を用いてセルの値を動的に計算する
-- セル間の循環依存を検出し、適切に処理する
-- スプレッドシートをファイルに保存し、後で復元できるようにする
+## Goals  
+- Set values to spreadsheet cells and compute their values.
+- Dynamically compute cell values using expressions.
+- Detect and handle circular dependencies between cells.
+- Save the spreadsheet to a file and restore it later.
 
-## 実装の詳細
-このプロジェクトには、以下の主要なクラスと関数が含まれます：
+## Implementation Details  
+This project includes the following main classes and functions:
 
-### CSpreadsheet
-スプレッドシートプロセッサ自体を表すクラスです。インスタンスは1つのシートを表します。以下の機能を実装します：
-- `setCell(CPos pos, std::string contents)`: 指定されたセルに値や式を設定します。
-- `getValue(CPos pos)`: 指定されたセルの値を計算して取得します。
-- `copyRect(CPos dstCell, CPos srcCell, int w, int h)`: 指定された範囲のセルをコピーします。
-- `save(std::ostream &os)`: スプレッドシートの内容を保存します。
-- `load(std::istream &is)`: スプレッドシートの内容を読み込みます。
+### `CSpreadsheet`  
+Represents the spreadsheet processor itself. Each instance corresponds to one sheet. Implements the following features:
+- `setCell(CPos pos, std::string contents)`: Sets a value or expression in the specified cell.
+- `getValue(CPos pos)`: Computes and retrieves the value of the specified cell.
+- `copyRect(CPos dstCell, CPos srcCell, int w, int h)`: Copies a rectangular range of cells.
+- `save(std::ostream &os)`: Saves the content of the spreadsheet.
+- `load(std::istream &is)`: Loads the content of the spreadsheet.
 
-### CPos
-シート内のセルを識別するクラスです。セルの識別子（例：A1、B2）を解析して内部表現に変換します。
+### `CPos`  
+Identifies a cell within the spreadsheet. Parses identifiers (e.g., A1, B2) into internal representation.
 
-### CExpressionBuilder
-抽象クラスであり、式の構文解析を行うためのビルダーオブジェクトを提供します。
+### `CExpressionBuilder`  
+An abstract class that provides builder objects for parsing expression syntax.
 
-### CValue
-セルの値を表すクラスで、未定義、数値、または文字列のいずれかです。
+### `CValue`  
+Represents a cell value, which may be undefined, numeric, or a string.
 
-### parseExpression
-式を解析し、ビルダーオブジェクトに解析結果を渡します。この関数は、提供された構文解析器を使用して実装します。
+### `parseExpression`  
+Parses an expression and passes the result to a builder object. This function is implemented using a provided parser.
 
-## チャレンジ
-このプロジェクトでは以下の課題がありました：
-- セル間の依存関係を管理し、循環依存を検出する
-- 式を解析し、効率的に評価するためのASTを構築する
-- `CopyRect`関数での絶対参照と相対参照の処理
+## Challenges  
+This project involved several technical challenges:
+- Managing dependencies between cells and detecting circular references.
+- Parsing expressions and building an efficient AST (Abstract Syntax Tree) for evaluation.
+- Handling absolute and relative references in the `copyRect` function.
 
-## 使用技術
-- C++
+## Technologies Used  
+- C++  
 - Git
 
-## 実行方法
-本プログラムはテストベースの実行環境であり、main関数を通じて以下の操作を行います：
+## How to Run  
+This program uses a test-based execution environment. The following operations are conducted via the `main` function:
 
-setCell(): セルの値を設定する
-copyRect(): 指定された範囲のセルを他の範囲のセルに貼り付ける
-save(): スプレッドシートの内容を保存する
-load(): スプレッドシートの内容を読み込む
-上記の操作を行った後、CSpreadsheet::getValue()を使用して各セルの値を出力し、プログラムをテストします。
+- `setCell()`: Sets the value of a cell  
+- `copyRect()`: Copies a range of cells to another range  
+- `save()`: Saves the spreadsheet content  
+- `load()`: Loads the spreadsheet content  
+- `getValue()`: Retrieves and prints cell values after operations for testing
 
+### Steps to Run:
 
-1. リポジトリをクローンします：
-    `git clone https://github.com/michiaka/teamlab_portfolio_2024.git`
-    
-2. クローンしたディレクトリ内でのプログラムのコンパイル
-    `g++ -pedantic -Wall -Wextra -g3 -fsanitize=address -std=c++20 -L ./ main.cpp -l:libexpression_parser.a -o main`
+1. **Clone the repository**:  
+    ```bash
+    git clone https://github.com/michiaka/teamlab_portfolio_2024.git
+    ```
 
-3. クローンしたディレクトリ内でのプログラムの実行
-    `./main`
+2. **Compile the program in the cloned directory**:  
+    ```bash
+    g++ -pedantic -Wall -Wextra -g3 -fsanitize=address -std=c++20 -L ./ main.cpp -l:libexpression_parser.a -o main
+    ```
 
-
- 
- 
- 
+3. **Run the program**:  
+    ```bash
+    ./main
+    ```
