@@ -54,17 +54,12 @@ This program uses a test-based execution environment. The following operations a
 
 ### Steps to Run:
 
-1. **Clone the repository**:  
-    ```bash
-    git clone https://github.com/michiaka/teamlab_portfolio_2024.git
-    ```
-
-2. **Compile the program in the cloned directory**:  
+1. **Compile the program in the cloned directory**:  
     ```bash
     g++ -pedantic -Wall -Wextra -g3 -fsanitize=address -std=c++20 -L ./ main.cpp -l:libexpression_parser.a -o main
     ```
 
-3. **Run the program**:  
+2. **Run the program**:  
     ```bash
     ./main
     ```
